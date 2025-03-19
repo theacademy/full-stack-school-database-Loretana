@@ -20,7 +20,6 @@ public class StudentServiceImpl implements StudentServiceInterface {
         this.studentDao = dao;
     }
 
-    @Autowired
     public StudentServiceImpl(StudentDao dao, CourseServiceInterface courseService) {
         this.studentDao = dao;
         this.courseService = courseService;
