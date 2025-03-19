@@ -51,12 +51,9 @@ public class CourseDaoImpl implements CourseDao {
     @Override
     public Course findCourseById(int id) {
         //YOUR CODE STARTS HERE
-        try {
-            final String SELECT_COURSE_BY_ID = "SELECT * FROM course WHERE cid = ?";
-            return jdbcTemplate.queryForObject(SELECT_COURSE_BY_ID, new CourseMapper(), id);
-        } catch(DataAccessException ex) {
-            return null;
-        }
+
+        final String SELECT_COURSE_BY_ID = "SELECT * FROM course WHERE cid = ?";
+        return jdbcTemplate.queryForObject(SELECT_COURSE_BY_ID, new CourseMapper(), id);
 
         //YOUR CODE ENDS HERE
     }
