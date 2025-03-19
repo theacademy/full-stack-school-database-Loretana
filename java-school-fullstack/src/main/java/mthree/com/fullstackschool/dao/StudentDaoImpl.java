@@ -56,12 +56,10 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public Student findStudentById(int id) {
         //YOUR CODE STARTS HERE
-        try {
-            final String SELECT_STUDENT_BY_ID = "SELECT * FROM student WHERE sid = ? ";
-            return jdbcTemplate.queryForObject(SELECT_STUDENT_BY_ID, new StudentMapper(), id);
-        } catch(DataAccessException ex) {
-            return null;
-        }
+
+        final String SELECT_STUDENT_BY_ID = "SELECT * FROM student WHERE sid = ? ";
+        return jdbcTemplate.queryForObject(SELECT_STUDENT_BY_ID, new StudentMapper(), id);
+
         //YOUR CODE ENDS HERE
     }
 
