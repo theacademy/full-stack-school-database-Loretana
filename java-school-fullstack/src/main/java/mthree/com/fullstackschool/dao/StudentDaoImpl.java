@@ -93,8 +93,9 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public void addStudentToCourse(int studentId, int courseId) {
         //YOUR CODE STARTS HERE
-
-
+        final String INSERT_STUDENT_TO_COURSE = "INSERT INTO course_student(student_id, course_id) "
+                + "VALUES(?, ?)";
+        jdbcTemplate.update(INSERT_STUDENT_TO_COURSE, studentId, courseId);
 
         //YOUR CODE ENDS HERE
     }
@@ -102,8 +103,8 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public void deleteStudentFromCourse(int studentId, int courseId) {
         //YOUR CODE STARTS HERE
-
-
+        final String DELETE_STUDENT_FROM_COURSE = "DELETE FROM course_student WHERE studentId = ? AND courseId = ?";
+        jdbcTemplate.update(DELETE_STUDENT_FROM_COURSE, studentId, courseId);
 
         //YOUR CODE ENDS HERE
     }
