@@ -53,12 +53,9 @@ public class TeacherDaoImpl implements TeacherDao {
     @Override
     public Teacher findTeacherById(int id) {
         //YOUR CODE STARTS HERE
-        try {
-            final String SELECT_TEACHER_BY_ID = "SELECT * FROM teacher WHERE tid = ?";
-            return jdbcTemplate.queryForObject(SELECT_TEACHER_BY_ID, new TeacherMapper(), id);
-        } catch (DataAccessException ex) {
-            return null;
-        }
+
+        final String SELECT_TEACHER_BY_ID = "SELECT * FROM teacher WHERE tid = ?";
+        return jdbcTemplate.queryForObject(SELECT_TEACHER_BY_ID, new TeacherMapper(), id);
 
         //YOUR CODE ENDS HERE
     }
