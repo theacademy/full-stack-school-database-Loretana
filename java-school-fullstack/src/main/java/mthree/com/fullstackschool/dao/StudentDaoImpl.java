@@ -101,7 +101,7 @@ public class StudentDaoImpl implements StudentDao {
     @Override
     public void deleteStudentFromCourse(int studentId, int courseId) {
         //YOUR CODE STARTS HERE
-        final String DELETE_STUDENT_FROM_COURSE = "DELETE FROM course_student WHERE studentId = ? AND courseId = ?";
+        final String DELETE_STUDENT_FROM_COURSE = "DELETE FROM course_student WHERE student_id = ? AND course_id = ? ";
         jdbcTemplate.update(DELETE_STUDENT_FROM_COURSE, studentId, courseId);
 
         //YOUR CODE ENDS HERE

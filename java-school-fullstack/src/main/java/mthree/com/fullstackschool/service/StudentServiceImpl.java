@@ -15,11 +15,12 @@ public class StudentServiceImpl implements StudentServiceInterface {
     private StudentDao studentDao;
     private CourseServiceInterface courseService;
     
-    @Autowired
+
     public StudentServiceImpl(StudentDao dao) {
         this.studentDao = dao;
     }
 
+    @Autowired
     public StudentServiceImpl(StudentDao dao, CourseServiceInterface courseService) {
         this.studentDao = dao;
         this.courseService = courseService;
