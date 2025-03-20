@@ -1,14 +1,10 @@
 package mthree.com.fullstackschool.dao;
 
 import mthree.com.fullstackschool.dao.mappers.CourseMapper;
-import mthree.com.fullstackschool.dao.mappers.StudentMapper;
 import mthree.com.fullstackschool.model.Course;
-import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Repository;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+
 import java.util.List;
 
 @Repository
